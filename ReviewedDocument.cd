@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.ReviewedDocumentType">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <Members>
+      <Field Name="documentDocketID" Hidden="true" />
+      <Field Name="documentHashText" Hidden="true" />
+      <Method Name="ReviewedDocumentType" Hidden="true" />
+      <Field Name="sealDocumentIndicator" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAEAAAAAEAAQAAAAAAAAAAAAAQAgAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.DocumentType">
+    <Position X="4.5" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="documentMetadata" Hidden="true" />
+      <Field Name="documentRendition" Hidden="true" />
+      <Method Name="DocumentType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAQAAABAAABAAABAQAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.NiemCore.v20.DocumentType">
+    <Position X="0.75" Y="4" Width="2.5" />
+    <Members>
+      <Field Name="documentApplicationName" Hidden="true" />
+      <Field Name="documentBinary" Hidden="true" />
+      <Field Name="documentDescriptionText" Hidden="true" />
+      <Field Name="documentEffectiveDate" Hidden="true" />
+      <Field Name="documentFileControlID" Hidden="true" />
+      <Field Name="documentFiledDate" Hidden="true" />
+      <Field Name="documentIdentification" Hidden="true" />
+      <Field Name="documentInformationCutOffDate" Hidden="true" />
+      <Field Name="documentLanguageCode" Hidden="true" />
+      <Field Name="documentPostDate" Hidden="true" />
+      <Field Name="documentReceivedDate" Hidden="true" />
+      <Field Name="documentSequenceID" Hidden="true" />
+      <Field Name="documentStatus" Hidden="true" />
+      <Field Name="documentSubmitter" Hidden="true" />
+      <Method Name="DocumentType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIEAAgAEAAABAYDEgQAABIIAAAAACEAAhAoCAQQAAEA=</HashCode>
+      <FileName>constraint\niem\niem-core\2.0\niem-core.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.Structures.v20.ComplexObjectType">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <Members>
+      <Method Name="ComplexObjectType" Hidden="true" />
+      <Field Name="id" Hidden="true" />
+      <Field Name="linkMetadata" Hidden="true" />
+      <Field Name="metadata" Hidden="true" />
+      <Event Name="PropertyChanged" Hidden="true" />
+      <Method Name="RaisePropertyChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQCAAACAAAAAAAAIAAAACAAgAAAAAAAAAAAAAAEAgA=</HashCode>
+      <FileName>constraint\niem\structures\2.0\structures.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="8.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.DocumentMetadataType">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Field Name="filingAttorneyID" Hidden="true" />
+      <Field Name="filingPartyID" Hidden="true" />
+      <Field Name="parentDocumentReference" Hidden="true" />
+      <Field Name="priorRelatedDocumentID" Hidden="true" />
+      <Field Name="redactionRequiredIndicator" Hidden="true" />
+      <Field Name="registerActionDescriptionText" Hidden="true" />
+      <Field Name="specialHandlingInstructions" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAUCAAABAAAAAAAABAACCAAAACBAAAAAQEQAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.Structures.v20.MetadataType" Collapsed="true">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>constraint\niem\structures\2.0\structures.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.DocumentRenditionType">
+    <Position X="7.75" Y="0.75" Width="1.75" />
+    <Members>
+      <Field Name="documentRenditionMetadata" Hidden="true" />
+      <Method Name="DocumentRenditionType" Hidden="true" />
+      <Field Name="documentSignature" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAACAIAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.DocumentRenditionMetadataType" Collapsed="true">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAhAAAAAgAQgAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

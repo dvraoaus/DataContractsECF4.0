@@ -1,0 +1,71 @@
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\ansi-nist\2.0\ansi-nist.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\ansi-nist\2.0\ansi-nist.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\ansi_d20\2.0\ansi_d20.xsd   C:\Samples2013\TexFile\Schema\ECF\constraint\niem\ansi_d20\2.0\ansi_d20.xsd	
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\appinfo\2.0\appinfo.xsd     C:\Samples2013\TexFile\Schema\ECF\constraint\niem\appinfo\2.0\appinfo.xsd    
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\domains\screening\2.0\screening.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\domains\screening\2.0\screening.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\fbi\2.0\fbi.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\fbi\2.0\fbi.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\fips_10-4\2.0\fips_10-4.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\fips_10-4\2.0\fips_10-4.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\fips_6-4\2.0\fips_6-4.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\fips_6-4\2.0\fips_6-4.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\iso_4217\2.0\iso_4217.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\iso_4217\2.0\iso_4217.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\iso_639-3\2.0\iso_639-3.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\iso_639-3\2.0\iso_639-3.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\nonauthoritative-code\2.0\nonauthoritative-code.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\nonauthoritative-code\2.0\nonauthoritative-code.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\proxy\xsd\2.0\xsd.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\proxy\xsd\2.0\xsd.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\structures\2.0\structures.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\structures\2.0\structures.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\unece_rec20-misc\2.0\unece_rec20-misc.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\unece_rec20-misc\2.0\unece_rec20-misc.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\usps_states\2.0\usps_states.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\usps_states\2.0\usps_states.xsd
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\niem-core\2.0\niem-core.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\niem-core\2.0\niem-core.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\constraint\niem\domains\jxdm\4.0\jxdm.xsd C:\Samples2013\TexFile\Schema\ECF\constraint\niem\domains\jxdm\4.0\jxdm.xsd
+
+
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\common\ECF-4.0-AppInfo.xsd		C:\Samples2013\TexFile\Schema\ECF\common\ECF-4.0-AppInfo.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\common\ECF-4.0-CommonTypes.xsd	C:\Samples2013\TexFile\Schema\ECF\common\ECF-4.0-CommonTypes.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\common\genericode.xsd		C:\Samples2013\TexFile\Schema\ECF\common\genericode.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\common\xmldsig-core-schema.xsd	C:\Samples2013\TexFile\Schema\ECF\common\xmldsig-core-schema.xsd
+
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-AppellateCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-AppellateCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-BankruptcyCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-BankruptcyCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-CitationCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-CitationCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-CivilCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-CivilCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-CriminalCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-CriminalCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-DomesticCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-DomesticCase.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\casetype\ECF-4.0-JuvenileCase.xsd C:\Samples2013\TexFile\Schema\ECF\casetype\ECF-4.0-JuvenileCase.xsd
+
+
+
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CaseListQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CaseListQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CaseListResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CaseListResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CaseQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CaseQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CaseResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CaseResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CoreFilingMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CoreFilingMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CourtPolicyQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CourtPolicyQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-CourtPolicyResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-CourtPolicyResponseMessage.xsd
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-DocumentQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-DocumentQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-DocumentResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-DocumentResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FeesCalculationQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FeesCalculationQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FeesCalculationResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FeesCalculationResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FilingListQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FilingListQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FilingListResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FilingListResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FilingStatusQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FilingStatusQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-FilingStatusResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-FilingStatusResponseMessage.xsd
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-MessageReceiptMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-MessageReceiptMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-PaymentMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-PaymentMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-PaymentReceiptMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-PaymentReceiptMessage.xsd
+
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-RecordDocketingCallbackMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-RecordDocketingCallbackMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-RecordDocketingMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-RecordDocketingMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-ReviewFilingCallbackMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-ReviewFilingCallbackMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-ServiceInformationQueryMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-ServiceInformationQueryMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-ServiceInformationResponseMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-ServiceInformationResponseMessage.xsd
+Tools.DiffFiles C:\development\eUniversa1\4.2.5\Courts\DataContractsECF4.0\message\ECF-4.0-ServiceReceiptMessage.xsd C:\Samples2013\TexFile\Schema\ECF\message\ECF-4.0-ServiceReceiptMessage.xsd
+
+
+
+
+
+
+

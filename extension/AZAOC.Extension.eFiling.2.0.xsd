@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- For AOC eFiling XML Version 2.0 -->
+<!--
+  Arizona Administrative Office of the Courts LegalXML Electronic Court Filing 4.01
+  Extension Schema
+
+  Copyright (C) Arizona Adminstrative Office of the Courts (2012). All Rights Reserved.
+
+ 
+  ===============================================================================
+-->
+<!-- Revision History:
+
+		2012-11-09		Gary Graham		Changed version number to 2.0 for aoc namespace 
+															URI and default namespace (mqsip) URI.
+
+		2012-12-04		Gary Graham		Extended Obligation by defining ObligationType, 
+															Obligation simple type and new non-NIEM ObligationCount element.
+
+		2014-09-11		Robert Roll			Merged AOC.Extension.eFiling.1.0.xsd into this one. 
+															Will be renamed to AOC.Extension.eFiling.2.0.xsd
+															Removed all reference to cac: (UBL - Contained in Payment Message)
+
+		2014-10-01		Gary Graham		Set version attribute to '2014-10-02'.
+															Removed aoc:CaseParticipantRoleCode from ecf:CaseParticipantType; for eFiling XML 2.0, mutiple instances of CaseParticipant will be
+															used when a given entity has more than one CaseParticipantRoleCode.
+															Removed DocumentTitleText - this element is now available in ECF 4.01
+															Removed SelfRepresentedPartyAssociationType and SelfRepresentedPartyAssociation elements.
+															Removed SelfRepresentedPartAssociation from CaseAugmentationType.
+															Added LitigantGroupAssociationType and LitgantGroup elements.
+															Added LitigantGroup to CaseAugmentationType.
+															Added new non-NIEM entity AttorneyReference; included AttorneyReference in LitigantGroupAssociationType.
+															Added LitigantGroupIdentification of nc:IdentificationType; included this element in LitigantGroupAssociationType.
+															Added LitigantGroupName of nc:IdentificationType; included this element in LitigantGroupAssociationType.
+															Removed aoc: prefix from CaseParticipantSelfRepresentationIndicator and CaseParticipantType; although functionally equivalent,
+															this inconsistency can lead to confusion.
+															Restored AllowanceChargeType and AllowanceCharge; this also required restoring the cac: namespace defintion and schema import.
+
+		2014-10-31		Gary Graham		Removed ActivityRequest from ActivityRequestType.
+															Added CoreFilingMessageType, derived from core:CoreFilingMessageType, and extended to include DocumentFiler. 
+															Added CoreFilingMessage of CoreFilingMessageType, which can be substituted for core:CoreFilingMessage.
+															Removed substitutionGroup="nc:DocumentSubmitter" from DocumentFiler.
+															Set schema version to '10-31-2014'.
+
+		2015-01-28		Gary Graham		Revised the documentation/standard definition for CaseSubCategoryText to be the NIEM definition. Revised documentation/standard
+															definition for CounterClaimDescription. Added aoc:ImmediateFamilyAssociationType, derived from nc:AssociationType and not
+															derived from nc:ImmediateFamilyAssociationType. This was done so that the cardinalities for nc:PersonParentReference and 
+															nc:PersonChildReference could be altered from those in nc:ImmediateFamilyAssociationType. Added new aoc:ImmedateFamilyAssociation
+															of type aoc:ImmediateFamilyAssociationType. The child elements of aoc:ImmediateFamilyAssociationType are the same as for
+															nc:ImmediateFamilyAssociationType, but the cardinalities are different for nc:PersonParentReference and nc:PersonChildReference.
+															Added OrganizationType derived from s:ComplexObjectType with element set of nc:OrganizationType plus the ecf:OrganizationType extensions
+															(i.e. j:OrganizationAugmentation and ecf:OrganizationAugmentation). This was done so that the cardinality of OrganizationIdentification
+															could be set to maxOccurs="unbounded" instead of "1". Added EntityOrganization of type aoc:OrganizationType.
+															Removed substitutionGroup="nc:EntityRepresentation" for Item.
+															Set schema version to '2015-01-28'.
+
+-->
+<xsd:schema xmlns="http://schema.azcourts.az.gov/courts/efiling/ecf/extension/2.0" xmlns:aoc="http://schema.azcourts.az.gov/courts/efiling/ecf/extension/2.0" xmlns:ecf="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CommonTypes-4.0" xmlns:j="http://niem.gov/niem/domains/jxdm/4.0" xmlns:i="http://niem.gov/niem/appinfo/2.0" xmlns:s="http://niem.gov/niem/structures/2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:niem-xsd="http://niem.gov/niem/proxy/xsd/2.0" xmlns:nc="http://niem.gov/niem/niem-core/2.0" xmlns:filingstatus="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:FilingStatusCode-4.0" xmlns:a="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:AppInfo-4.0" xmlns:core="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CoreFilingMessage-4.0" xmlns:docket="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:RecordDocketingMessage-4.0" xmlns:civil="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CivilCase-4.0" xmlns:appellate="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:AppellateCase-4.0" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:scr="http://niem.gov/niem/domains/screening/2.0" targetNamespace="http://schema.azcourts.az.gov/courts/efiling/ecf/extension/2.0" elementFormDefault="qualified" version="2015-01-28">
+	<xsd:annotation>
+		<xsd:documentation>Arizona Court e-Filing Document Types</xsd:documentation>
+		<xsd:appinfo>
+			<i:ConformantIndicator>true</i:ConformantIndicator>
+		</xsd:appinfo>
+	</xsd:annotation>
+	<xsd:import namespace="http://niem.gov/niem/niem-core/2.0" schemaLocation="../constraint/niem/niem-core/2.0/niem-core.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/structures/2.0" schemaLocation="../constraint/niem/structures/2.0/structures.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/appinfo/2.0" schemaLocation="../constraint/niem/appinfo/2.0/appinfo.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/proxy/xsd/2.0" schemaLocation="../constraint/niem/proxy/xsd/2.0/xsd.xsd"/>
+	<xsd:import namespace="http://niem.gov/niem/domains/jxdm/4.0" schemaLocation="../constraint/niem/domains/jxdm/4.0/jxdm.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:AppInfo-4.0" schemaLocation="../common/ECF-4.0-AppInfo.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CommonTypes-4.0" schemaLocation="../common/ECF-4.0-CommonTypes.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CoreFilingMessage-4.0" schemaLocation="../message/ECF-4.0-CoreFilingMessage.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:RecordDocketingMessage-4.0" schemaLocation="../message/ECF-4.0-RecordDocketingMessage.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:CivilCase-4.0" schemaLocation="../casetype/ECF-4.0-CivilCase.xsd"/>
+	<xsd:import namespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:AppellateCase-4.0" schemaLocation="../casetype/ECF-4.0-AppellateCase.xsd"/>
+	<!--  RAO
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../os-UBL-2.1/xsd/common/UBL-CommonAggregateComponents-2.1.xsd"/>
+  -->
+	<xsd:import namespace="http://niem.gov/niem/domains/screening/2.0" schemaLocation="../constraint/niem/domains/screening/2.0/screening.xsd"/>
+	<!-- ================================================================================================================== -->
+	<!-- New Attributes -->
+	<!-- ================================================================================================================== -->
+	<xsd:attribute name="count" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The number of some thing.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- ================================================================================================================== -->
+	<!-- Complex Types -->
+	<!-- ================================================================================================================== -->
+	<xsd:complexType name="ActivityRequestType">
+		<xsd:complexContent>
+			<xsd:extension base="nc:ActivityType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+  <!-- Rao
+	<xsd:complexType name="AllowanceChargeType">
+		<xsd:annotation>
+			<xsd:documentation>AllowanceChargeType extended.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="cac:AllowanceChargeType">
+				<xsd:sequence>
+					<xsd:element ref="AllowanceChargeCategoryCode" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+  -->
+	<xsd:complexType name="AppellateCaseOriginalCaseType">
+		<xsd:annotation>
+			<xsd:documentation>Original case information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:CaseType">
+				<xsd:sequence>
+					<xsd:element ref="j:CaseAugmentation" minOccurs="0"/>
+					<xsd:element ref="ecf:CaseAugmentation" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AppellateCaseType">
+		<xsd:annotation>
+			<xsd:documentation>Appellate CaseType extended.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="appellate:AppellateCaseType">
+				<xsd:sequence>
+					<xsd:element ref="CaseGeneralCategoryText" minOccurs="0"/>
+					<xsd:element ref="CaseSubCategoryText" minOccurs="0"/>
+					<xsd:element ref="MarriageAssociation" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="GuardianAssociation" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="aoc:ImmediateFamilyAssociation" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CaseAugmentationType">
+		<xsd:complexContent>
+			<xsd:extension base="ecf:CaseAugmentationType">
+				<xsd:sequence>
+					<xsd:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="LitigantGroup" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CaseLineageCaseType">
+		<xsd:annotation>
+			<xsd:documentation>Lineage predecessor case information</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:CaseType">
+				<xsd:sequence>
+					<xsd:element ref="j:CaseAugmentation" minOccurs="0"/>
+					<xsd:element ref="ecf:CaseAugmentation" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CaseParticipantType">
+		<xsd:complexContent>
+			<xsd:extension base="ecf:CaseParticipantType">
+				<xsd:sequence>
+					<xsd:element ref="CasePartySelfRepresentationIndicator" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CivilCaseType">
+		<xsd:annotation>
+			<xsd:documentation>Civil CaseType extended.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="civil:CivilCaseType">
+				<xsd:sequence>
+					<xsd:element ref="CaseGeneralCategoryText" minOccurs="0"/>
+					<xsd:element ref="CaseSubCategoryText" minOccurs="0"/>
+					<xsd:element ref="CounterClaimDescription" minOccurs="0"/>
+					<xsd:element ref="MarriageAssociation" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="GuardianAssociation" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ImmediateFamilyAssociation" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CoreFilingMessageType">
+		<xsd:annotation>
+			<xsd:documentation>The structure of a Filing including any Payment Information will be documented in this section. This describes the filing transaction between the Filing Assembly MDE and the Filing Review MDE. This information will become part of the Record Docketing between the Filing Review MDE and the Court Record MDE but does not necessarily describe the information that is actually stored in the Court Record.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:CoreFilingMessageType">
+				<xsd:sequence>
+					<xsd:element ref="DocumentFiler" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CourtEventType">
+		<xsd:complexContent>
+			<xsd:extension base="ecf:CourtEventType">
+				<xsd:sequence>
+					<xsd:element ref="ActivityCategoryText" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ActivityReasonText" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="CourtEventDocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="CourtEventCourt" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="CourtType">
+		<xsd:annotation>
+			<xsd:documentation>j:CourtType extended.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="j:CourtType">
+				<xsd:sequence>
+					<xsd:element ref="CourtDivisionText" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentType">
+		<xsd:annotation>
+			<xsd:documentation>A Lead document that is the pleading, motion or order that is the main document in a Filing or a Connected Document. A Lead Document may have Connected Documents, which are "appendices" or "exhibits" that are intended for filing only in the context of the Lead Document.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ecf:DocumentType">
+				<xsd:sequence>
+					<xsd:element ref="DocumentCategoryID"/>
+					<xsd:element ref="DocumentCategoryName"/>
+					<xsd:element ref="ActivityRequest" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="DocumentMetadataType">
+		<xsd:annotation>
+			<xsd:documentation>Document descriptors (title, type description, etc.) for the Document. This is meant to include all the information about the document that is needed to index it into the Case Management System and enter it into the Document Management System.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ecf:DocumentMetadataType">
+				<xsd:sequence>
+					<xsd:element ref="DocumentSigner" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FilingAttorneyType">
+		<xsd:annotation>
+			<xsd:documentation>FilingAttorneyType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="j:CaseOfficialType">
+				<xsd:sequence>
+					<xsd:element ref="JudicialOfficialRegistrationIdentification" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="GuardianAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>Information about the juvenile's parent(s) or guardian(s).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:GuardianAssociationType">
+				<xsd:sequence>
+					<xsd:element ref="GuardianAssociationTypeCode" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="GuardianAssociationTypeCode" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>A code describing the parent or guardian's relationship to the juvenile. Allowable values are set forth in court filing policy. Examples: Father, Mother, Guardian</xsd:documentation>
+			<xsd:appinfo>
+				<a:CourtPolicyDefinedCodeIndicator>true</a:CourtPolicyDefinedCodeIndicator>
+				<a:CodeListReference a:CanonicalURI="urn:oasis:names:tc:legalxml-courtfiling:codelist:gc:GuardianAssociationTypeCode" a:CanonicalVersionURI="urn:oasis:names:tc:legalxml-courtfiling:codelist:gc:GuardianAssociationTypeCode-4.0" a:LocationURI="../../gc/ECF-4.0-GuardianAssociationTypeCode.gc"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Extended Identification type to allow to reference to the identification defined elsewhere within the same XML instance.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:IdentificationType">
+				<xsd:sequence>
+					<xsd:element ref="IdentificationEffectiveDate" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute ref="s:ref"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ImmediateFamilyAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>ImmediateFamilyAssociationType</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:AssociationType">
+				<xsd:sequence>
+					<xsd:element ref="nc:PersonParentReference" minOccurs="1" maxOccurs="unbounded"/>
+					<xsd:element ref="nc:PersonChildReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="nc:FamilyKinshipCategory" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ItemType">
+		<xsd:complexContent>
+			<xsd:extension base="nc:ItemType">
+				<xsd:sequence>
+					<xsd:element ref="ItemOwner" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="nc:Obligation" minOccurs="0" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="MarriageAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>Information about a marriage, civil domestic union, or other domestic relationship defined by law.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="nc:PersonUnionAssociationType">
+				<xsd:sequence>
+					<xsd:element ref="scr:MarriageAssociationAugmentation"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ObligationType">
+		<xsd:complexContent>
+			<xsd:extension base="nc:ObligationType">
+				<xsd:sequence>
+					<xsd:element ref="ObligationCount" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="OrganizationType">
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="nc:OrganizationIdentification" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="nc:OrganizationLocation" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="nc:OrganizationName" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="nc:OrganizationPrimaryContactInformation" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="nc:OrganizationSubUnitName" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="nc:OrganizationTaxIdentification" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="nc:OrganizationUnitName" minOccurs="0" maxOccurs="1"/>
+					<xsd:element ref="j:OrganizationAugmentation" minOccurs="0"/>
+					<xsd:element ref="ecf:OrganizationAugmentation" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="ReviewedDocumentType">
+		<xsd:annotation>
+			<xsd:documentation>A Lead document that is the pleading, motion or order that is the main document in a Filing or a Connected Document. A Lead Document may have Connected Documents, which are "appendices" or "exhibits" that are intended for filing only in the context of the Lead Document.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="ecf:ReviewedDocumentType">
+				<xsd:sequence>
+					<xsd:element ref="DocumentCategoryID" minOccurs="0"/>
+					<xsd:element ref="DocumentCategoryName" minOccurs="0"/>
+					<xsd:element ref="ActivityRequest" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attribute ref="s:ref"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="RecordDocketingMessageType">
+		<xsd:annotation>
+			<xsd:documentation>Message resulting from clerk review and edit of a CoreFilingMessage.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="docket:RecordDocketingMessageType">
+				<xsd:sequence>
+					<xsd:element ref="nc:Case" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ================================================================================================================== -->
+	<!-- New Complex Types not defined in NIEM 2.0                              																																	   -->
+	<!-- ================================================================================================================== -->
+	<xsd:complexType name="LitigantGroupAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>A data type used to associate all parties (i.e. litigants) in a case that collectively have common legal representation and their attorneys.</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/structures/2.0" i:name="Object"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="s:ComplexObjectType">
+				<xsd:sequence>
+					<xsd:element ref="AttorneyReference" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="ecf:CaseRepresentedPartyReference" minOccurs="1" maxOccurs="unbounded"/>
+					<xsd:element ref="LitigantGroupIdentification" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:element ref="LitigantGroupName" minOccurs="0" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!-- ================================================================================================================== -->
+	<!-- Simple Types -->
+	<!-- ================================================================================================================== -->
+	<xsd:element name="ActivityRequest" type="ActivityRequestType">
+		<xsd:annotation>
+			<xsd:documentation>A request for an activity.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+  <!-- Rao 
+	<xsd:element name="AllowanceCharge" type="AllowanceChargeType" substitutionGroup="cac:AllowanceCharge"/>
+  -->
+	<xsd:element name="AllowanceChargeCategoryCode" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation/>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AppellateCaseOriginalCase" type="AppellateCaseOriginalCaseType" substitutionGroup="j:AppellateCaseOriginalCase"/>
+	<xsd:element name="AppellateCase" type="AppellateCaseType" substitutionGroup="nc:Case">
+		<xsd:annotation>
+			<xsd:documentation>Information required to initiate a new case in an appellate court.</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="Case"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseAugmentation" type="CaseAugmentationType" substitutionGroup="ecf:CaseAugmentation">
+		<xsd:annotation>
+			<xsd:documentation>Additional information about a case.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseCourtEvent" type="CourtEventType" substitutionGroup="ecf:CaseCourtEvent">
+		<xsd:annotation>
+			<xsd:documentation>A court occurrence.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseGeneralCategoryText" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A broadly defined kind of case. For example, Civil, etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseOfficialCaseIdentification" type="IdentificationType" substitutionGroup="j:CaseOfficialCaseIdentification">
+		<xsd:annotation>
+			<xsd:documentation>A unique identifier a justice official uses to identify a case.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseParticipant" type="CaseParticipantType" substitutionGroup="ecf:CaseParticipant">
+		<xsd:annotation>
+			<xsd:documentation>Information about a case participant.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CaseSubCategoryText" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A more specific classification of a kind of case.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CivilCase" type="CivilCaseType" substitutionGroup="nc:Case">
+		<xsd:annotation>
+			<xsd:documentation>Information required to initiate a new civil case in a court. "Civil" includes conservatorships, guardianships, mental health and probate.</xsd:documentation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="Case"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CoreFilingMessage" type="CoreFilingMessageType" substitutionGroup="core:CoreFilingMessage">
+		<xsd:annotation>
+			<xsd:documentation>Message, originating in FAMDE, resulting from filer preparing then submitting an e-filing submission.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CounterClaimDescription" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>Civil case counter claim reason.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CourtEventDocumentReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A paper or electronic document.</xsd:documentation>
+			<xsd:appinfo>
+				<i:ReferenceTarget i:name="DocumentType"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentCategoryID" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>An identifier of a kind of information in a document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentCategoryName" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A name of a category of information in a document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentFiler" type="nc:EntityType">
+		<xsd:annotation>
+			<xsd:documentation>Identifies the filer of a document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentMetadata" type="DocumentMetadataType" substitutionGroup="ecf:DocumentMetadata">
+		<xsd:annotation>
+			<xsd:documentation>Document descriptors (title, type description, etc.) for the Document. This is meant to include all the information about the document that is needed to index it into the Case Management System and enter it into the Document Management System.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	
+	<xsd:element name="EntityOrganization" type="OrganizationType" substitutionGroup="nc:EntityRepresentation">
+		<xsd:annotation>
+			<xsd:appinfo>
+				<i:Base i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="EntityRepresentation"/>
+			</xsd:appinfo>
+			<xsd:documentation>An organization capable of bearing legal rights and responsibilities.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>	
+	
+	
+	<xsd:element name="FilingAttorney" type="FilingAttorneyType" substitutionGroup="j:CaseInitiatingAttorney" nillable="true"/>
+	<xsd:element name="FilingAttorneyID" type="IdentificationType" substitutionGroup="ecf:FilingAttorneyID">
+		<xsd:annotation>
+			<xsd:documentation>ID recognized by the court as being unique within this case,and used to identify the attorney who is filing this document. Not present for pro se litigants.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilingParty" type="nc:EntityType" substitutionGroup="j:CaseInitiatingParty" nillable="true"/>
+	<xsd:element name="FilingPartyID" type="IdentificationType" substitutionGroup="ecf:FilingPartyID">
+		<xsd:annotation>
+			<xsd:documentation>IID recognized by the court as being unique within this case,and used to identify the party on whose behalf this document is being filed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilingConnectedDocument" type="DocumentType" substitutionGroup="core:FilingConnectedDocument">
+		<xsd:annotation>
+			<xsd:documentation>A document included in a Filing that supports the Document. This document is not separately entered on the docket or register of actions.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="FilingLeadDocument" type="DocumentType" substitutionGroup="core:FilingLeadDocument">
+		<xsd:annotation>
+			<xsd:documentation>The pleading, motion or order that is the main document in a Filing. A Document may have Attachments.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="GuardianAssociation" type="GuardianAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>Information about the juvenile's parent(s) or guardian(s).</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="IdentificationEffectiveDate" type="nc:DateType">
+		<xsd:annotation>
+			<xsd:documentation>A date an identification takes effect.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ImmediateFamilyAssociation" type="ImmediateFamilyAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>A family unit. NIEM: An association between parents and children.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Item" type="ItemType">
+		<xsd:annotation>
+			<xsd:documentation>An article or thing.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="JudicialOfficialRegistrationIdentification" type="IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>An identifier assigned to a judicial official after registering within a state or region.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MarriageAssociation" type="MarriageAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>Information about a marriage, civil domestic union, or other domestic relationship defined by law.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Obligation" type="ObligationType" substitutionGroup="nc:Obligation">
+		<xsd:annotation>
+			<xsd:documentation>Something owed.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="RecordDocketingMessage" type="RecordDocketingMessageType" substitutionGroup="docket:RecordDocketingMessage">
+		<xsd:annotation>
+			<xsd:documentation>Message resulting from clerk review and edit of a CoreFilingMessage.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ReviewedConnectedDocument" type="ReviewedDocumentType" substitutionGroup="ecf:ReviewedConnectedDocument">
+		<xsd:annotation>
+			<xsd:documentation>This association will be present for each connected document that is reviewed by clerk review. For documents that were rejected by the clerk review process or the court record system, only the documentStatusCode, originalDocumentID, and (optionally) the documentStatusReasonDescription will be present. For documents that were accepted and recorded, all attributes will be present, except for documentStatusReasonDescription, which may or may not be present.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ReviewedLeadDocument" type="ReviewedDocumentType" substitutionGroup="ecf:ReviewedLeadDocument">
+		<xsd:annotation>
+			<xsd:documentation>This association will be present for a lead document that is reviewed by clerk review. For documents that were rejected by the clerk review process or the court record system, only the documentStatusCode, originalDocumentID, and (optionally) the documentStatusReasonDescription will be present. For documents that were accepted and recorded, all attributes will be present, except for documentStatusReasonDescription, which may or may not be present.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================================================================================================================== -->
+	<!-- Global Justice elements not included in LegalXML 4.01 jxdm.xsd -->
+	<!-- ================================================================================================================== -->
+	<xsd:element name="CaseLineageCase" type="CaseLineageCaseType" substitutionGroup="j:CaseLineageCase"/>
+	<xsd:element name="CourtDivisionText" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>An area of case processing and the law governing specific types of matters before the court and governed by distinct court rule and processes.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CourtEventCourt" type="CourtType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A court in which a court event occurs.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================================================================================================================== -->
+	<!-- NIEM Core elements not included in LegalXML 4.01 NIEM-Core -->
+	<!-- ================================================================================================================== -->
+	<xsd:element name="ActivityCategoryText" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A kind of activity.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ActivityReasonText" type="nc:TextType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>A reason for an activity.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ItemOwner" type="nc:EntityType" nillable="true">
+		<xsd:annotation>
+			<xsd:documentation>An entity which owns a property item.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ================================================================================================================== -->
+	<!-- New elements not defined in NIEM 2.0                                    -->
+	<!-- ================================================================================================================== -->
+	<xsd:element name="AttorneyReference" type="s:ReferenceType">
+		<xsd:annotation>
+			<xsd:documentation>A reference to an attorney.</xsd:documentation>
+			<xsd:appinfo>
+				<i:ReferenceTarget i:namespace="http://niem.gov/niem/niem-core/2.0" i:name="jCaseOfficialType"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CasePartySelfRepresentationIndicator" type="niem-xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>True if a case party waived the right to be represented by an attorney and is representing him or herself; false otherwise.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentSigner" type="nc:EntityType">
+		<xsd:annotation>
+			<xsd:documentation>Identifies the signer of a document.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LitigantGroup" type="LitigantGroupAssociationType">
+		<xsd:annotation>
+			<xsd:documentation>Defines a collection of litigants who have common legal representation in a case and their legal representatives.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LitigantGroupIdentification" type="nc:IdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>Identifies an instance of a Litigant Group</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="LitigantGroupName" type="nc:TextType">
+		<xsd:annotation>
+			<xsd:documentation>The moniker by which a Litigant Group is known or referred.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ObligationCount" type="nc:NumericType">
+		<xsd:annotation>
+			<xsd:documentation>A count of obligations.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+</xsd:schema>

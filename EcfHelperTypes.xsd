@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HelperTypes"
+    targetNamespace="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:HelperTypes-4.0"
+    elementFormDefault="qualified"
+    xmlns="urn:oasis:names:tc:legalxml-courtfiling:schema:xsd:HelperTypes-4.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+	<xs:complexType name="PersonType">
+		<xs:annotation>
+			<xs:documentation>Person Name Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element  name="Id"  type="xs:string" />
+			<xs:element  name="Prefix"  type="xs:string"/>
+			<xs:element  name="GivenName"  type="xs:string"/>
+			<xs:element  name="MiddleName"  type="xs:string" />
+			<xs:element  name="SurName"  type="xs:string"/>
+			<xs:element  name="Suffix"  type="xs:string" />
+			<xs:element  name="SuffixCode"  type="xs:string" />
+			<xs:element  name="FullName"  type="xs:string"/>
+			<xs:element  name="EportalUserId"  type="xs:string" />
+			<xs:element  name="ContactInformation"  type="ContactInformationType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrganizationType">
+		<xs:annotation>
+			<xs:documentation>Organization Type</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element  name="Id"  type="xs:string" />
+			<xs:element  name="EportalOrganizationId "  type="xs:string" />
+			<xs:element  name="Name"  type="xs:string" />
+			<xs:element  name="EportalUnitId"  type="xs:string" />
+			<xs:element  name="UnitName"  type="xs:string" />
+			<xs:element  name="EportalSubUnitId"  type="xs:string" />
+			<xs:element  name="SubUnitName "  type="xs:string" />
+			<xs:element  name="ContactInformation"  type="ContactInformationType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactInformationType">
+		<xs:annotation>
+			<xs:documentation>Simple Contact Information Type</xs:documentation>
+		</xs:annotation>
+				<xs:sequence>
+					<xs:element  name="Address1"  type="xs:string"/>
+					<xs:element  name="Address2"  type="xs:string"/>
+					<xs:element  name="City"  type="xs:string"/>
+					<xs:element  name="State"  type="xs:string"/>
+					<xs:element  name="ZipCode"  type="xs:string"/>
+					<xs:element  name="PrimaryPhoneNumber"  type="xs:string"/>
+					<xs:element  name="PhoneNumberExtension"  type="xs:string"/>
+					<xs:element  name="EmailAddress"  type="xs:string"/>
+					<xs:element  name="HomePhoneNumber"  type="xs:string"/>
+					<xs:element  name="WorkPhoneNumber"  type="xs:string"/>
+					<xs:element  name="MobliePhoneNumber"  type="xs:string"/>
+					<xs:element  name="FaxPhoneNumber"  type="xs:string"/>
+					<xs:element  name="AddressFullText"  type="xs:string"/>
+          <xs:element  name="WorkPhoneNumberExtension"  type="xs:string"/>
+				</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Docketing.RecordDocketingMessageType">
+    <Position X="0.5" Y="0.5" Width="4.25" />
+    <Members>
+      <Method Name="AddNameSpaces" Hidden="true" />
+      <Field Name="caseCourt" Hidden="true" />
+      <Field Name="caseTrackingID" Hidden="true" />
+      <Field Name="filingReviewCommentsText" Hidden="true" />
+      <Field Name="namespaces" Hidden="true" />
+      <Method Name="RecordDocketingMessageType" Hidden="true" />
+      <Field Name="reviewedConnectedDocument" Hidden="true" />
+      <Field Name="reviewedLeadDocument" Hidden="true" />
+      <Field Name="sealCaseIndicator" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AYAAgAEBCAAAAQAAAAAAAAgAAAAAAAAAAAAAgAiAAIA=</HashCode>
+      <FileName>message\ECF-4.0-RecordDocketingMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.ElectronicFilingMessageType">
+    <Position X="5.25" Y="0.5" Width="3.5" />
+    <Members>
+      <Method Name="ElectronicFilingMessageType" Hidden="true" />
+      <Field Name="electronicServiceInformation" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Ecf.CaseFilingType">
+    <Position X="9.25" Y="0.5" Width="2.5" />
+    <Members>
+      <Method Name="CaseFilingType" Hidden="true" />
+      <Field Name="sendingMDELocationID" Hidden="true" />
+      <Field Name="sendingMDEProfileCode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAIAAAAAAAAAAAAAAAIAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>common\ECF-4.0-CommonTypes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.NiemCore.v20.DocumentType">
+    <Position X="2.5" Y="3.5" Width="3.25" />
+    <Members>
+      <Field Name="documentApplicationName" Hidden="true" />
+      <Field Name="documentBinary" Hidden="true" />
+      <Field Name="documentDescriptionText" Hidden="true" />
+      <Field Name="documentEffectiveDate" Hidden="true" />
+      <Field Name="documentFileControlID" Hidden="true" />
+      <Field Name="documentFiledDate" Hidden="true" />
+      <Field Name="documentIdentification" Hidden="true" />
+      <Field Name="documentInformationCutOffDate" Hidden="true" />
+      <Field Name="documentLanguageCode" Hidden="true" />
+      <Field Name="documentPostDate" Hidden="true" />
+      <Field Name="documentReceivedDate" Hidden="true" />
+      <Field Name="documentSequenceID" Hidden="true" />
+      <Field Name="documentStatus" Hidden="true" />
+      <Field Name="documentSubmitter" Hidden="true" />
+      <Method Name="DocumentType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIEAAgAEAAABAYDEgQAABIIAAAAACEAAhAoCAQQAAEA=</HashCode>
+      <FileName>constraint\niem\niem-core\2.0\niem-core.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.Structures.v20.ComplexObjectType">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <Members>
+      <Method Name="ComplexObjectType" Hidden="true" />
+      <Field Name="id" Hidden="true" />
+      <Field Name="linkMetadata" Hidden="true" />
+      <Field Name="metadata" Hidden="true" />
+      <Event Name="PropertyChanged" Hidden="true" />
+      <Method Name="RaisePropertyChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQCAAACAAAAAAAAIAAAACAAgAAAAAAAAAAAAAAEAgA=</HashCode>
+      <FileName>constraint\niem\structures\2.0\structures.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="9" Y="5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

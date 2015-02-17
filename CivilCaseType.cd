@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Oasis.LegalXml.CourtFiling.v40.Civil.CivilCaseType">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <Members>
+      <Field Name="amountInControversy" Hidden="true" />
+      <Field Name="caseAugmentation" Hidden="true" />
+      <Field Name="causeOfActionCode" Hidden="true" />
+      <Method Name="CivilCaseType" Hidden="true" />
+      <Field Name="classActionIndicator" Hidden="true" />
+      <Field Name="ecfCaseAugmentation" Hidden="true" />
+      <Field Name="jurisdictionalGroundsCode" Hidden="true" />
+      <Field Name="juryDemandIndicator" Hidden="true" />
+      <Field Name="probateCase" Hidden="true" />
+      <Field Name="reliefTypeCode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAIEAAACAAAgAAQEAIAEgBCAAAAQBAQACAAAgAgA=</HashCode>
+      <FileName>casetype\ECF-4.0-CivilCase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.NiemCore.v20.CaseType">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="caseCategoryText" Hidden="true" />
+      <Field Name="caseDocketID" Hidden="true" />
+      <Field Name="caseTitleText" Hidden="true" />
+      <Field Name="caseTrackingID" Hidden="true" />
+      <Method Name="CaseType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAgAAAAAAAAAAAAAAAQAAAAEAAAAAAABAAgAAQAIA=</HashCode>
+      <FileName>constraint\niem\niem-core\2.0\niem-core.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.NiemCore.v20.ActivityType">
+    <Position X="6.75" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="activityDateRepresentations" Hidden="true" />
+      <Field Name="activityDescriptionText" Hidden="true" />
+      <Field Name="activityDisposition" Hidden="true" />
+      <Field Name="activityIdentification" Hidden="true" />
+      <Field Name="activityStatus" Hidden="true" />
+      <Method Name="ActivityType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAgBQAAAAEAAACAAAAAgAAAAAAAAAAEAAIA=</HashCode>
+      <FileName>constraint\niem\niem-core\2.0\niem-core.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Niem.Structures.v20.ComplexObjectType">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <Members>
+      <Method Name="ComplexObjectType" Hidden="true" />
+      <Field Name="id" Hidden="true" />
+      <Field Name="linkMetadata" Hidden="true" />
+      <Field Name="metadata" Hidden="true" />
+      <Event Name="PropertyChanged" Hidden="true" />
+      <Method Name="RaisePropertyChanged" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQCAAACAAAAAAAAIAAAACAAgAAAAAAAAAAAAAAEAgA=</HashCode>
+      <FileName>constraint\niem\structures\2.0\structures.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <Members>
+      <Method Name="Finalize" Hidden="true" />
+      <Method Name="Equals" Hidden="true" />
+      <Method Name="GetHashCode" Hidden="true" />
+      <Method Name="GetType" Hidden="true" />
+      <Method Name="MemberwiseClone" Hidden="true" />
+      <Method Name="Object" Hidden="true" />
+      <Method Name="ReferenceEquals" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

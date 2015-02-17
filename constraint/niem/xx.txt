@@ -1,0 +1,59 @@
+fbi\2.0\fbi.xsd:<xsd:documentation>Canada(See separate list of CanadianProvinces; use code CD only whenprovince is unknown.)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>OTHER CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>ABI Leisure Inc.Ontario, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Acadian (GM of Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Alforge Metals Corp.Ontario, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>ALUTREC INC. STE-AGATHE, QUEBEC CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Ber-Vac (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Can-Car(Canadian Car Trailer Sales Div.)Rexdale, Ontario--Div. of Hawker-Siddeley, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Can-Car Inc.Tree-farming equipment--Div. Hawker-Siddeley Canada, Ontario, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Columbia Trailer Co., Ltd.Vancouver, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>CAMPAGNA MOTO SPORT, INC; PLESSISVILLE, QUEBEC, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>COMPTANK, CORP.; BOTHWELL, ONTARIO, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Degelman Industries, Ltd. (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Delhi Metal Products, Ltd.Delhi, Ontario, Canada--mfrs. boattrailers</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>DELOUPE, INC.; QUEBEC, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>DRAKE TRUCK BODIES, VERNON BRIDGE, PRINCE EDWARD ISLAND , CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Farm King, Ltd., (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Friggstad Mfg., Ltd., (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>General Coach Works of CanadaDiv. of Divco-Wayne Industries</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>GLENDALE RECREATIONAL VEHICLES; STRATHROY, ONTARIO, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Husky Farm Equipment Ltd.Ontario, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>HAYSHED TRAILERS; ALBERTA CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>JAMCO TRAILERS; BRUCEFIELD, ONTARIO, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>J &amp; J TRAILER MANUFACTURING OR J.D.J. TRAILER MANUFACTURING, ONTARIO, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Leon Manufacturing Co., Ltd.,(Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>MCCLOSKEY BROTHERS MANUFACTURING; CANADA LIT.ONTARIO</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>METAVIC TRAILERS; ST. PIERRE-BAPTISTE, QUEBEC CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>MOND INDUSTRIES, INC.MISSISSAUGA, ONTARIO, CANADA; PURCHASED BY TRAILMOBILE IN 1999 TRAILEMOBILE IN</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>MAX-ATLAS EQUIPMENT INTERNATIONAL, INC.; ST-JEAN-SUR-RICHELIEU, QUEBEC CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Ontario Bus Industries, Inc.Mississauga, Ontario, Canada; bus.</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>PEAK MANUFACTURING, INC. NORTH BATLEFORD, SK CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Prevost Car, Inc.Mfrs. of "Prevost Bus"--Sainte Claire,Quebec, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>LES MACHINERIES PRONOVOST, INC; CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>REMEQ, INC.; PRINCEVILLE, QUEBEC CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Richard Piche, Inc.Quebec, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Selox Mfg., Ltd.Toronto, Ontario, Canada</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>SOUDRE KERR, INC.; COOKSHIRE, QUEBEC CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Tecnoma, Ltd., (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>THOMAS EQUIPMENT LTD.; NEW BRUNSWICK, CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>T &amp; M MANUFACTURING, INC.; PRINCETON, ONTARIO CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Trans Canada Rent-A-Trailer System</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>TRAILTECH; GRAVELBOURG,SASKATCHEWAN CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>Vanguard (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>George White &amp; Sons Co., Ltd.,(Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>WALTRON LIMITED/ALDURA; RIDGETOWN, ONTARIO CANADA</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>EL, Acura  (Import from Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(ACAD) Beaumont Series, Acadian (GM of Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(ACAD) Canso Series, Acadian (GM of Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(HUDS) Deluxe, Hudson; (KAIS) Deluxe, Kaiser; (CHEV) Del Ray, Chevrolet; (DESO) Deluxe, DeSoto; (DODG) Deluxe, Dodge; (FORD) Deluxe, Ford (see English, French, German, and Italian Ford); (HILL) Deluxe, Hillman; (MORR) Deluxe, Morris; (OLDS) Deluxe, Oldsmobile; (PONT) Deluxe, Pontiac; (RAMB) Deluxe, Rambler (mfd. prior to 1966; 1966 and later Ramblers - see make American Motors); (SUNB) Deluxe, Sunbeam; (VANG) Deluxe, Vanguard (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(ACUR) EL, Acura  (Import from Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(VANG) Ensign, Vanguard (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(ACAD) Invader Series, Acadian (GM of Canada); (BUIC) Invicta, Buick</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(OPEL) Luxus, Opel (imported by Buick); (VANG) Luxury, Vanguard (Canada)</xsd:documentation>
+fbi\2.0\fbi.xsd:<xsd:documentation>(LINC) Mark III, Lincoln-Continental; (VANG) Mark III, Vanguard (Canada)</xsd:documentation>
+fips_10-4\2.0\fips_10-4.xsd:<xsd:documentation>CANADA</xsd:documentation>
+iso_4217\2.0\iso_4217.xsd:<xsd:documentation>Canadian Dollar: Canada</xsd:documentation>
+niem-core\2.0\niem-core.xsd:<xsd:documentation>A dialing code for a state or province for phone numbers in the USA, Canada, Mexico, and the Caribbean. </xsd:documentation>
+usps_states\2.0\usps_states.xsd:<xsd:documentation>Armed Forces Americas (except Canada)</xsd:documentation>
+usps_states\2.0\usps_states.xsd:<xsd:documentation>Armed Forces Africa, Canada, Europe, Middle East</xsd:documentation>

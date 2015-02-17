@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5199CC25-5FCD-47A1-A8A5-591D5636F4FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oasis.LegalXml.CourtFiling.v40</RootNamespace>
+    <AssemblyName>Oasis.LegalXml.CourtFiling.v4.9</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\..\VistaSG.snk</AssemblyOriginatorKeyFile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BulkFilingReviewMessageContracts.cs" />
+    <Compile Include="casetype\ECF-4.0-AppellateCase.cs">
+      <DependentUpon>ECF-4.0-AppellateCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="casetype\ECF-4.0-CitationCase.cs">
+      <DependentUpon>ECF-4.0-CitationCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="casetype\ECF-4.0-CivilCase.cs">
+      <DependentUpon>ECF-4.0-CivilCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="casetype\ECF-4.0-CriminalCase.cs">
+      <DependentUpon>ECF-4.0-CriminalCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="casetype\ECF-4.0-DomesticCase.cs">
+      <DependentUpon>ECF-4.0-DomesticCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="casetype\ECF-4.0-JuvenileCase.cs">
+      <DependentUpon>ECF-4.0-JuvenileCase.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="common\ECF-4.0-AppInfo.cs">
+      <DependentUpon>ECF-4.0-AppInfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="common\ECF-4.0-CommonTypes.cs">
+      <DependentUpon>ECF-4.0-CommonTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="common\xmldsig-core-schema.cs">
+      <DependentUpon>xmldsig-core-schema.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\ansi-nist\2.0\ansi-nist.cs">
+      <DependentUpon>ansi-nist.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\ansi_d20\2.0\ansi_d20.cs">
+      <DependentUpon>ansi_d20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\appinfo\2.0\appinfo.cs">
+      <DependentUpon>appinfo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\domains\jxdm\4.0\jxdm.cs">
+      <DependentUpon>jxdm.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\domains\screening\2.0\screening.cs">
+      <DependentUpon>screening.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\fbi\2.0\fbi.cs">
+      <DependentUpon>fbi.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\fips_10-4\2.0\fips_10-4.cs">
+      <DependentUpon>fips_10-4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\fips_6-4\2.0\fips_6-4.cs">
+      <DependentUpon>fips_6-4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\iso_4217\2.0\iso_4217.cs">
+      <DependentUpon>iso_4217.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\iso_639-3\2.0\iso_639-3.cs">
+      <DependentUpon>iso_639-3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\niem-core\2.0\niem-core.cs">
+      <DependentUpon>niem-core.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\nonauthoritative-code\2.0\nonauthoritative-code.cs">
+      <DependentUpon>nonauthoritative-code.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\proxy\xsd\2.0\xsd.cs">
+      <DependentUpon>xsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\structures\2.0\structures.cs">
+      <DependentUpon>structures.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\unece_rec20-misc\2.0\unece_rec20-misc.cs">
+      <DependentUpon>unece_rec20-misc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="constraint\niem\usps_states\2.0\usps_states.cs">
+      <DependentUpon>usps_states.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EcfHelperTypes.cs">
+      <DependentUpon>EcfHelperTypes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="extension\AZAOC.Extension.eFiling.2.0.cs">
+      <DependentUpon>AZAOC.Extension.eFiling.2.0.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IBulkFilingReview.cs" />
+    <Compile Include="FilingAssemblyMessageContracts.cs" />
+    <Compile Include="CourtRecordMessageContracts.cs" />
+    <Compile Include="EcfHelper.cs" />
+    <Compile Include="FilingReviewMessageContracts.cs" />
+    <Compile Include="IFilingAssembly.cs" />
+    <Compile Include="NiemHelper.cs" />
+    <Compile Include="message\ECF-4.0-CaseListQueryMessage.cs">
+      <DependentUpon>ECF-4.0-CaseListQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CaseListResponseMessage.cs">
+      <DependentUpon>ECF-4.0-CaseListResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CaseQueryMessage.cs">
+      <DependentUpon>ECF-4.0-CaseQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CaseResponseMessage.cs">
+      <DependentUpon>ECF-4.0-CaseResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CoreFilingMessage.cs">
+      <DependentUpon>ECF-4.0-CoreFilingMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CourtPolicyQueryMessage.cs">
+      <DependentUpon>ECF-4.0-CourtPolicyQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-CourtPolicyResponseMessage.cs">
+      <DependentUpon>ECF-4.0-CourtPolicyResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-DocumentQueryMessage.cs">
+      <DependentUpon>ECF-4.0-DocumentQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-DocumentResponseMessage.cs">
+      <DependentUpon>ECF-4.0-DocumentResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FeesCalculationQueryMessage.cs">
+      <DependentUpon>ECF-4.0-FeesCalculationQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FeesCalculationResponseMessage.cs">
+      <DependentUpon>ECF-4.0-FeesCalculationResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FilingListQueryMessage.cs">
+      <DependentUpon>ECF-4.0-FilingListQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FilingListResponseMessage.cs">
+      <DependentUpon>ECF-4.0-FilingListResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FilingStatusQueryMessage.cs">
+      <DependentUpon>ECF-4.0-FilingStatusQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-FilingStatusResponseMessage.cs">
+      <DependentUpon>ECF-4.0-FilingStatusResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-MessageReceiptMessage.cs">
+      <DependentUpon>ECF-4.0-MessageReceiptMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-PaymentMessage.cs">
+      <DependentUpon>ECF-4.0-PaymentMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-PaymentReceiptMessage.cs">
+      <DependentUpon>ECF-4.0-PaymentReceiptMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-RecordDocketingCallbackMessage.cs">
+      <DependentUpon>ECF-4.0-RecordDocketingCallbackMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-RecordDocketingMessage.cs">
+      <DependentUpon>ECF-4.0-RecordDocketingMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-ReviewFilingCallbackMessage.cs">
+      <DependentUpon>ECF-4.0-ReviewFilingCallbackMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-ServiceInformationQueryMessage.cs">
+      <DependentUpon>ECF-4.0-ServiceInformationQueryMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-ServiceInformationResponseMessage.cs">
+      <DependentUpon>ECF-4.0-ServiceInformationResponseMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="message\ECF-4.0-ServiceReceiptMessage.cs">
+      <DependentUpon>ECF-4.0-ServiceReceiptMessage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oasis-UniversalBusinessLanguage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\VistaSG.snk">
+      <Link>VistaSG.snk</Link>
+    </None>
+    <None Include="casetype\ECF-4.0-AppellateCase.xsd" />
+    <None Include="casetype\ECF-4.0-BankruptcyCase.xsd" />
+    <None Include="casetype\ECF-4.0-CitationCase.xsd" />
+    <None Include="casetype\ECF-4.0-CivilCase.xsd" />
+    <None Include="casetype\ECF-4.0-CriminalCase.xsd" />
+    <None Include="casetype\ECF-4.0-DomesticCase.xsd" />
+    <None Include="casetype\ECF-4.0-JuvenileCase.xsd" />
+    <None Include="CivilCaseType.cd" />
+    <None Include="EcfHelperTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="extension\AZAOC.Extension.eFiling.2.0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NiemEntity.cd" />
+    <None Include="EcfPerson.cd" />
+    <None Include="RecordDocketingMessage.cd" />
+    <None Include="common\ECF-4.0-AppInfo.xsd" />
+    <None Include="common\ECF-4.0-CommonTypes.xsd" />
+    <None Include="common\genericode.xsd" />
+    <None Include="common\xmldsig-core-schema.xsd" />
+    <None Include="constraint\niem\ansi-nist\2.0\ansi-nist.xsd" />
+    <None Include="constraint\niem\ansi_d20\2.0\ansi_d20.xsd" />
+    <None Include="constraint\niem\appinfo\2.0\appinfo.xsd" />
+    <None Include="constraint\niem\domains\jxdm\4.0\jxdm.xsd" />
+    <None Include="constraint\niem\domains\screening\2.0\screening.xsd" />
+    <None Include="constraint\niem\fbi\2.0\fbi.xsd" />
+    <None Include="constraint\niem\fips_10-4\2.0\fips_10-4.xsd" />
+    <None Include="constraint\niem\fips_6-4\2.0\fips_6-4.xsd" />
+    <None Include="constraint\niem\iso_4217\2.0\iso_4217.xsd" />
+    <None Include="constraint\niem\iso_639-3\2.0\iso_639-3.xsd" />
+    <None Include="constraint\niem\niem-core\2.0\niem-core.xsd" />
+    <None Include="constraint\niem\nonauthoritative-code\2.0\nonauthoritative-code.xsd" />
+    <None Include="constraint\niem\proxy\xsd\2.0\xsd.xsd" />
+    <None Include="constraint\niem\structures\2.0\structures.xsd" />
+    <None Include="constraint\niem\unece_rec20-misc\2.0\unece_rec20-misc.xsd" />
+    <None Include="constraint\niem\usps_states\2.0\usps_states.xsd" />
+    <None Include="message\ECF-4.0-CaseListQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-CaseListResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-CaseQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-CaseResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-CoreFilingMessage.xsd" />
+    <None Include="message\ECF-4.0-CourtPolicyQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-CourtPolicyResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-DocumentQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-DocumentResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-FeesCalculationQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-FeesCalculationResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-FilingListQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-FilingListResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-FilingStatusQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-FilingStatusResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-MessageReceiptMessage.xsd" />
+    <None Include="message\ECF-4.0-PaymentMessage.xsd" />
+    <None Include="message\ECF-4.0-PaymentReceiptMessage.xsd" />
+    <None Include="message\ECF-4.0-RecordDocketingCallbackMessage.xsd" />
+    <None Include="message\ECF-4.0-RecordDocketingMessage.xsd" />
+    <None Include="message\ECF-4.0-ReviewFilingCallbackMessage.xsd" />
+    <None Include="message\ECF-4.0-ServiceInformationQueryMessage.xsd" />
+    <None Include="message\ECF-4.0-ServiceInformationResponseMessage.xsd" />
+    <None Include="message\ECF-4.0-ServiceReceiptMessage.xsd" />
+    <None Include="ReviewedDocument.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="constraint\niem\ansi-nist\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\ansi_d20\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\domains\jxdm\4.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\domains\screening\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\fbi\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\fips_10-4\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\fips_6-4\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\iso_4217\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\iso_639-3\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\niem-core\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\nonauthoritative-code\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\unece_rec20-misc\2.0\constraint-schema-transform.xsl" />
+    <Content Include="constraint\niem\usps_states\2.0\constraint-schema-transform.xsl" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>XCOPY /I /E /R /Y "$(TargetDir)*.*" "$(SolutionDir)..\CompiledAssemblies"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
